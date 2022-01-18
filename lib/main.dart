@@ -54,6 +54,14 @@ class _MyAppState extends State<MyApp> {
   ];
 
   var _totalScore = 0;
+
+  void resetQuiz() {
+    setState(() {
+      _totalScore = 0;
+      _questionIndex = 0;
+    });
+  }
+
   void _answerQuestion(int score) {
     _totalScore += score;
     setState(() {
@@ -69,7 +77,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           backgroundColor: Colors.cyan.shade500,
           title: const Text(
-            'First Flutter Application',
+            'Personality Quiz!',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
