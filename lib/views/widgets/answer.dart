@@ -1,3 +1,4 @@
+import 'package:first_app/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
@@ -12,7 +13,7 @@ class Answer extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(8),
       width: double.infinity,
-      color: Colors.cyan.shade500,
+      color: kAppColor,
       child: TextButton(
         child: Text(
           answerText,

@@ -40,17 +40,20 @@ class Result extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          TextButton(
-            child: Text(
-              'Restart Quiz',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+          SizedBox(
+            width: double.infinity,
+            child: TextButton(
+              child: Text(
+                'Restart Quiz',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
-            onPressed: resetHandler,
-            style: TextButton.styleFrom(
-              backgroundColor: kAppColor,
+              onPressed: resetHandler,
+              style: TextButton.styleFrom(
+                backgroundColor: kAppColor,
+              ),
             ),
           ),
         ],
