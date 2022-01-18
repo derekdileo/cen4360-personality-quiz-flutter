@@ -1,3 +1,4 @@
+import 'package:first_app/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/main.dart';
 
@@ -36,9 +37,21 @@ class Result extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
+          SizedBox(
+            height: 20.0,
+          ),
           TextButton(
-            child: Text('Restart Quiz'),
+            child: Text(
+              'Restart Quiz',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
             onPressed: resetHandler,
+            style: TextButton.styleFrom(
+              backgroundColor: kAppColor,
+            ),
           ),
         ],
       ),
