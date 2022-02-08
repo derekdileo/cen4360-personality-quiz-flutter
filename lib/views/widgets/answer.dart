@@ -11,16 +11,13 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       width: double.infinity,
       color: kAppColor,
       child: TextButton(
         child: Text(
           answerText,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+          style: kAnswerTextStyle,
         ),
         onPressed: selectHandler,
       ),

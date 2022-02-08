@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import './views/widgets/quiz.dart';
 import './views/widgets/result.dart';
+import './utilities/constants.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -46,9 +44,9 @@ class _MyAppState extends State<MyApp> {
       'questionText': 'Who is your favorite person?',
       'answers': [
         {'text': 'Mel', 'score': 1},
+        {'text': 'Melly', 'score': 1},
+        {'text': 'Melissa', 'score': 1},
         {'text': 'Maaahge', 'score': 1},
-        {'text': 'Sweet Baby Angel', 'score': 1},
-        {'text': 'Titi', 'score': 1},
       ],
     },
   ];
@@ -75,10 +73,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.cyan.shade500,
+          backgroundColor: kAppColor,
           title: const Text(
             'Personality Quiz!',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: kAppBarTextStyle,
           ),
         ),
         body: Center(
