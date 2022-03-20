@@ -1,4 +1,5 @@
 import 'package:first_app/utilities/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
@@ -14,13 +15,21 @@ class Answer extends StatelessWidget {
       margin: const EdgeInsets.all(8),
       width: double.infinity,
       color: kAppColor,
-      child: TextButton(
-        child: Text(
-          answerText,
-          style: kAnswerTextStyle,
-        ),
-        onPressed: selectHandler,
-      ),
+      child: Theme.of(context).platform == TargetPlatform.iOS
+          ? CupertinoButton(
+              child: Text(
+                answerText,
+                style: kAnswerTextStyle,
+              ),
+              onPressed: selectHandler,
+            )
+          : TextButton(
+              child: Text(
+                answerText,
+                style: kAnswerTextStyle,
+              ),
+              onPressed: selectHandler,
+            ),
     );
   }
 }
