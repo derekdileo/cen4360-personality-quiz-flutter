@@ -1,4 +1,5 @@
 import 'package:first_app/utilities/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
@@ -38,13 +39,19 @@ class Result extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            child: TextButton(
-              child: kResultRestartText,
-              onPressed: resetHandler,
-              style: TextButton.styleFrom(
-                backgroundColor: kAppColor,
-              ),
-            ),
+            child: Theme.of(context).platform == TargetPlatform.iOS
+                ? CupertinoButton(
+                    child: kResultRestartText,
+                    onPressed: resetHandler,
+                    color: kAppColor,
+                  )
+                : TextButton(
+                    child: kResultRestartText,
+                    onPressed: resetHandler,
+                    style: TextButton.styleFrom(
+                      backgroundColor: kAppColor,
+                    ),
+                  ),
           ),
         ],
       ),
